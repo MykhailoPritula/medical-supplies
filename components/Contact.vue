@@ -3,12 +3,27 @@
     <div class="container">
       <div class="contact-box">
         <h2>Have A Question?</h2>
-        <button>Contact Us</button>
+        <button @click.prevent="openForm">Contact Us</button>
         <a href="www.supplies.bcommerce.global">www.supplies.bcommerce.global</a>
       </div>
+      <Form v-if="form"/>
     </div>
   </section>
 </template>
+<script>
+export default {
+  data(){
+    return{
+      form: false
+    }
+  },
+  methods: {
+    openForm(){
+      this.form = true
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .contact{

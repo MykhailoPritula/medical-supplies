@@ -2,10 +2,10 @@
   <header class="header">
     <div class="container">
       <img class="header-logo" src="@/assets/img/logo.svg">
-      <ul ref="nav" class="header-nav">
-        <li @click.prevent="changeTab(0)"><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Contacts</a></li>
+      <ul class="header-nav">
+        <li><nuxt-link to="/">Home</nuxt-link></li>
+        <li><nuxt-link to="/">Shop</nuxt-link></li>
+        <li><nuxt-link to="/">Contacts</nuxt-link></li>
       </ul>
       <div class="header-search">
         <img src="@/assets/img/search.svg">
@@ -22,15 +22,6 @@
 </template>
 <script>
 export default {
-  methods: {
-    toggleMenu(e){
-      this.$refs.nav.classList.toggle('active')
-      e.target.classList.toggle('active')
-    },
-    changeTab(index){
-      this.$store.state.index = index
-    }
-  }
 }
 </script>
 <style lang="scss" scoped>

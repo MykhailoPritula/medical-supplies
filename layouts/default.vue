@@ -2,6 +2,9 @@
   <main class="layout layout-default">
     <Header />
     <Nuxt />
+    <Protections />
+    <Faq />
+    <Contact />
     <Footer />
   </main>
 </template>
